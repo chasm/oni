@@ -1,18 +1,16 @@
 <h1>Oni</h1>
 
-<form method="POST" action="/login">
+<%= form_for :user do |f| %>
   <fieldset>
     <legend>Please log in</legend>
     <div class="form-group">
-      <label for="user_email">Email</label>
-      <input type="email" id="user_email" name="user[email]">
+      <%= f.text_field :email %>
     </div>
     <div class="form-group">
-      <label for="user_password">Email</label>
-      <input type="password" id="user_password" name="user[password]">
+      <%= f.password_field :password %>
     </div>
     <div class="form-group">
-      <input type="submit" value="Log in">
+      <%= f.submit "Log in" %>
     </div>
   </fieldset>
-</form>
+<% end %>
